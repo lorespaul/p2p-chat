@@ -1,3 +1,4 @@
+//see https://github.com/nicojanssens/udp-hole-puncher-js
 const dgram = require('dgram');
 const UdpHolePuncher = require('udp-hole-puncher');
 const stun = require('stun');
