@@ -59,7 +59,9 @@ async function main() {
 
                 socket.on('listening', () => {
                     // puncher config
-                    const puncher = new UdpHolePuncher(socket);
+                    const puncher = new UdpHolePuncher(socket, {
+                        maxRequestAttempts: 100
+                    });
                     // when connection is established, send dummy message
                     puncher.on('connected', () => {
                         sendMessage(socket, CONNECTION_MESSAGE, peerAddress, peerPort);
